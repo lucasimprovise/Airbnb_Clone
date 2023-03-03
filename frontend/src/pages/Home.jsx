@@ -126,7 +126,7 @@ const Home = () => {
       </section>
       {/* ============ gallery section end =============== */}
 
-      {/* ============ testimonial section start ========== */}
+      {/* ============ Carousel section start ========== */}
       <section>
         <Container>
           <Row>
@@ -139,7 +139,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      {/* ============ testimonial section end ========== */}
+      {/* ============ Carousel section end ========== */}
     </>
   );
 };

@@ -67,7 +67,7 @@ const Register = () => {
                   <FormGroup>
                     <input
                       type="text"
-                      placeholder="Username"
+                      placeholder="Nom d'utilisateur"
                       required
                       id="username"
                       onChange={handleChange}
@@ -95,11 +95,11 @@ const Register = () => {
                     className="btn secondary__btn auth__btn"
                     type="submit"
                   >
-                    Create account
+                    Créer
                   </Button>
                 </Form>
                 <p>
-                  Already have an account? <Link to="/login">Login</Link>
+                  Tu as déjà un compte? <Link to="/login">Login</Link>
                 </p>
               </div>
             </div>

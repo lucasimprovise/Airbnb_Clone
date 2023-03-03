@@ -16,10 +16,10 @@ const TourDetails = () => {
   const [tourRating, setTourRating] = useState(null);
   const { user } = useContext(AuthContext);
 
-  // fetch data from database
+  // fetch data de la bb
   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
 
-  // destructure properties from tour object
+  // Division de chaque propriété de l'objet tour
   const {
     photo,
     title,
@@ -37,7 +37,7 @@ const TourDetails = () => {
   // format date
   const options = { day: "numeric", month: "long", year: "numeric" };
 
-  // submit request to the server
+  // envoie de la requête au serveur
   const submitHandler = async e => {
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
@@ -130,7 +130,7 @@ const TourDetails = () => {
                     <p>{desc}</p>
                   </div>
 
-                  {/* ========== tour reviews section =========== */}
+                  {/* ========== airbnb reviews section =========== */}
                   <div className="tour__reviews mt-4">
                     <h4>Reviews ({reviews?.length} reviews)</h4>
 
@@ -157,14 +157,14 @@ const TourDetails = () => {
                         <input
                           type="text"
                           ref={reviewMsgRef}
-                          placeholder="share your thoughts"
+                          placeholder="Donnez votre avis"
                           required
                         />
                         <button
                           className="btn primary__btn text-white"
                           type="submit"
                         >
-                          Submit
+                          Envoyez
                         </button>
                       </div>
                     </Form>
@@ -196,7 +196,7 @@ const TourDetails = () => {
                       ))}
                     </ListGroup>
                   </div>
-                  {/* ========== tour reviews section end =========== */}
+                  {/* ========== airbnb  reviews section end =========== */}
                 </div>
               </Col>
 

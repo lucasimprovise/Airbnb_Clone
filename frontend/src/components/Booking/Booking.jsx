@@ -28,7 +28,7 @@ const Booking = ({ tour, avgRating }) => {
   const totalAmount =
     Number(price) * Number(booking.guestSize) + Number(serviceFee);
 
-  //   send data to the server
+  //   Envoie de la data au serveur
   const handleClick = async e => {
     e.preventDefault();
 
@@ -133,7 +133,7 @@ const Booking = ({ tour, avgRating }) => {
         </ListGroup>
 
         <Button className="btn primary__btn w-100 mt-4" onClick={handleClick}>
-          Book Now
+          Réserver
         </Button>
       </div>
     </div>

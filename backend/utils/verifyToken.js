@@ -9,7 +9,7 @@ export const verifyToken = (req, res, next) => {
       .json({ success: false, message: "You're not authorize" });
   }
 
-  // if token is exist then verify the token
+  // Verifie si le token existe
   jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
     if (err) {
       return res
@@ -18,7 +18,7 @@ export const verifyToken = (req, res, next) => {
     }
 
     req.user = user;
-    next(); // don't forget to call next
+    next(); // Ne pas oublier de faire un appel à next
   });
 };
 
